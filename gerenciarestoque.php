@@ -20,7 +20,7 @@ $estoque = array (
     ),
 );
 
-//------- Função de adicionar produto
+//------- Função adicionar produto
 function adicionarProduto (array $dadosProduto, float $valorRemover): array  
 {
         $dadosProduto['Estoque'] += $valorRemover;
@@ -28,7 +28,7 @@ function adicionarProduto (array $dadosProduto, float $valorRemover): array
 }
 //-------
 
-//------- Função de remover produto
+//------- Função remover produto
 function removerProduto (array $dadosProduto, float $valorRemover): array  
 {
     if ($valorRemover > $dadosProduto['Estoque']) {
@@ -43,7 +43,7 @@ function removerProduto (array $dadosProduto, float $valorRemover): array
 //-------
 
 
-//------- Função de mostrar mensagem
+//------- Função mostrar mensagem
 function exibeMensagem(string $mensagem)
 {
     echo $mensagem . PHP_EOL;
@@ -51,7 +51,7 @@ function exibeMensagem(string $mensagem)
 //-------
 
 
-//------- Função para verificar disponibilidade
+//------- Função verificar disponibilidade
 function verificarDisponibilidade($estoque, $produto) {
     if (isset($estoque[$produto])) {
         return $estoque[$produto]["Estoque"];
